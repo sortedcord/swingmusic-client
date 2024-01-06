@@ -21,6 +21,11 @@
           <PlusSvg /> New Playlist
         </button>
       </template>
+      <template v-if="!isSmall" #right>
+        <button @click="showNewPlaylistModal()">
+          <PlusSvg /> Import Playlist
+        </button>
+      </template>
     </Header>
     <PlaylistCardGroup
       v-if="!query && pinnedPlaylists.length"
